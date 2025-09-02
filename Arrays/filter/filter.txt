@@ -1,0 +1,15 @@
+> what it does 
+return new array containing only the elements that passes the test defined in callback function
+
+it iterates to the element in the array, 
+if the callback is true the element is included 
+else it is not pushed in new array
+
+steps:
+1.define dunction passing array and callback function as parameter
+2.declare empty array
+3.loop to each of element in originial array
+4.if callbackFn if true [if(callbackFn(a[i],i,arr))]
+5.push element to new array result.push(a[i])
+
+
