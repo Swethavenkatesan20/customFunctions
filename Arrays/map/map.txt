@@ -1,0 +1,54 @@
+> What it does
+> Why it matters
+> Edge cases
+> Real-world use
+
+
+
+> What it does
+built-in array function. 
+  *it takes callback function 
+  *applies to every element in array and 
+  *return new array
+does not chnage or mutate original array
+
+syntax : const newArr=arr.map(callbackFn)
+with parameters : const newArr=arr.map((element,index,array)=>{})
+
+
+example : let arr=[1,2,3]
+
+let newArr=arr.map((e)=>{return e*2}) //
+
+
+map internal function 
+custom map 
+steps ;
+1.define function pasing array and callback as parameters
+2.define empty array
+3.loop through array passed as parameter
+4.apply callback function and push to empty array for call back function it takes element(array[i]),index(i),array
+5.return pushed array
+
+function customMap(array,callbackFn){        //1
+   let result=[];                            //2
+   for(let i=0;i<arr.length;i++){            //3
+    result.push(callbackFn(arr[i],i,array))  //4
+   }
+   return result                             //5
+}
+
+
+> Why it matters
+can be chained with filter reduce
+makes code easy to read than tradtional for loop
+does not mutate original array return new array
+
+
+> Edge cases
+when callback is empty it returns array with undefined
+applicable only for object
+
+
+> Real-world use
+display data in UI by iterating the data
